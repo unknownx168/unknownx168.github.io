@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตะกร้าสินค้า - Paotung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+    
+    * {
+     font-family: "Bai Jamjuree", sans-serif;
+    }
+    
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .content-wrapper {
+      flex: 1 0 auto;
+    }
+    
+    footer {
+      flex-shrink: 0;
+    }
+</style>
+<body class="bg-gray-50">
+    <div class="content-wrapper">
+        <!-- Top Bar -->
+        <div class="bg-blue-700 text-white py-2">
+            <div class="container mx-auto px-4 flex justify-between items-center">
+                <div>
+                    <span class="mr-4"><i class="fas fa-phone mr-2"></i> โทร: 097-999-5390</span>
+                    <span><i class="fas fa-envelope mr-2"></i> อีเมล: paotung@jpt.re</span>
+                </div>
+                <div>
+                    <a href="#" class="mr-4 hover:text-blue-200">ติดตามสถานะการสั่งซื้อ</a>
+                    <a href="#" class="hover:text-blue-200">ติดต่อเรา</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="bg-white shadow-md sticky top-0 z-50">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center py-4">
+                    <!-- Logo -->
+                    <div class="flex items-center">
+                        <a href="index.html" class="text-2xl font-bold text-blue-700">
+                            <i class="fas fa-cogs mr-2"></i>Paotung
+                        </a>
+                    </div>
+
+                    <!-- Search Bar -->
+                    <div class="hidden md:block flex-grow max-w-md mx-6">
+                        <div class="relative">
+                            <input type="text" placeholder="ค้นหาอะไหล่รถยนต์..." class="w-full py-2 pl-4 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                            <button class="absolute right-0 top-0 mt-2 mr-3 text-blue-700">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Items -->
+                    <div class="flex items-center space-x-6">
+                        <a href="#" class="text-gray-700 hover:text-blue-700">
+                            <i class="fas fa-user text-xl"></i>
+                            <span class="ml-1 hidden md:inline">บัญชี</span>
+                        </a>
+                        <a href="#" class="text-gray-700 hover:text-blue-700">
+                            <i class="fas fa-heart text-xl"></i>
+                            <span class="ml-1 hidden md:inline">สินค้าโปรด</span>
+                        </a>
+                        <a href="#" class="text-blue-700 relative">
+                            <i class="fas fa-shopping-cart text-xl"></i>
+                            <span class="ml-1 hidden md:inline">ตะกร้า</span>
+                            <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile Search Bar -->
+                <div class="md:hidden pb-4">
+                    <div class="relative">
+                        <input type="text" placeholder="ค้นหาอะไหล่รถยนต์..." class="w-full py-2 pl-4 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                        <button class="absolute right-0 top-0 mt-2 mr-3 text-blue-700">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Breadcrumb -->
+        <div class="bg-gray-100 py-3">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center text-gray-600 text-sm">
+                    <a href="index.html" class="hover:text-blue-700">หน้าแรก</a>
+                    <span class="mx-2">/</span>
+                    <span class="text-blue-700 font-medium">ตะกร้าสินค้า</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Content -->
+        <div class="container mx-auto px-4 py-8">
+            <h1 class="text-3xl font-bold mb-8">ตะกร้าสินค้า</h1>
+
+            <!-- Cart Items -->
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Products List -->
+                <div class="lg:w-2/3">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden mb-4">
+                        <!-- Table Header -->
+                        <div class="hidden md:grid grid-cols-12 gap-4 p-4 bg-gray-50 font-semibold text-gray-700 border-b">
+                            <div class="col-span-6">สินค้า</div>
+                            <div class="col-span-2 text-center">ราคา</div>
+                            <div class="col-span-2 text-center">จำนวน</div>
+                            <div class="col-span-2 text-center">ราคารวม</div>
+                        </div>
+
+                        <!-- Cart Item 1 -->
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 border-b items-center">
+                            <div class="md:col-span-6">
+                                <div class="flex items-center">
+                                    <img src="imgs/2.webp" alt="น้ำมันเครื่อง Castrol EDGE" class="w-20 h-20 object-cover rounded mr-4">
+                                    <div>
+                                        <h3 class="font-semibold text-gray-800 mb-1">น้ำมันเครื่อง Castrol EDGE 5W-30</h3>
+                                        <p class="text-sm text-gray-500">รหัสสินค้า: CST-5W30-1L</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:col-span-2 flex justify-between md:justify-center items-center">
+                                <span class="md:hidden font-medium">ราคา:</span>
+                                <span class="font-medium text-blue-700">฿899</span>
+                            </div>
+                            <div class="md:col-span-2 flex justify-between md:justify-center items-center">
+                                <span class="md:hidden font-medium">จำนวน:</span>
+                                <div class="flex items-center border rounded">
+                                    <button class="px-3 py-1 text-gray-600 hover:bg-gray-100">-</button>
+                                    <input type="number" min="1" value="1" class="w-12 text-center focus:outline-none py-1">
+                                    <button class="px-3 py-1 text-gray-600 hover:bg-gray-100">+</button>
+                                </div>
+                            </div>
+                            <div class="md:col-span-2 flex justify-between md:justify-center items-center">
+                                <span class="md:hidden font-medium">ราคารวม:</span>
+                                <div class="flex items-center">
+                                    <span class="font-medium text-blue-700 mr-3">฿899</span>
+                                    <button class="text-red-500 hover:text-red-700">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cart Item 2 -->
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 border-b items-center">
+                            <div class="md:col-span-6">
+                                <div class="flex items-center">
+                                    <img src="imgs/3.webp" alt="ผ้าเบรก Brembo" class="w-20 h-20 object-cover rounded mr-4">
+                                    <div>
+                                        <h3 class="font-semibold text-gray-800 mb-1">ผ้าเบรก Brembo สำหรับรถยนต์ Toyota</h3>
+                                        <p class="text-sm text-gray-500">รหัสสินค้า: BRM-TYT-001</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:col-span-2 flex justify-between md:justify-center items-center">
+                                <span class="md:hidden font-medium">ราคา:</span>
+                                <span class="font-medium text-blue-700">฿2,400</span>
+                            </div>
+                            <div class="md:col-span-2 flex justify-between md:justify-center items-center">
+                                <span class="md:hidden font-medium">จำนวน:</span>
+                                <div class="flex items-center border rounded">
+                                    <button class="px-3 py-1 text-gray-600 hover:bg-gray-100">-</button>
+                                    <input type="number" min="1" value="1" class="w-12 text-center focus:outline-none py-1">
+                                    <button class="px-3 py-1 text-gray-600 hover:bg-gray-100">+</button>
+                                </div>
+                            </div>
+                            <div class="md:col-span-2 flex justify-between md:justify-center items-center">
+                                <span class="md:hidden font-medium">ราคารวม:</span>
+                                <div class="flex items-center">
+                                    <span class="font-medium text-blue-700 mr-3">฿2,400</span>
+                                    <button class="text-red-500 hover:text-red-700">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cart Item 3 -->
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 border-b items-center">
+                            <div class="md:col-span-6">
+                                <div class="flex items-center">
+                                    <img src="imgs/4.webp" alt="แบตเตอรี่ 3K" class="w-20 h-20 object-cover rounded mr-4">
+                                    <div>
+                                        <h3 class="font-semibold text-gray-800 mb-1">แบตเตอรี่ 3K รุ่น NS60L 45Ah</h3>
+                                        <p class="text-sm text-gray-500">รหัสสินค้า: 3K-NS60L-45</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:col-span-2 flex justify-between md:justify-center items-center">
+                                <span class="md:hidden font-medium">ราคา:</span>
+                                <span class="font-medium text-blue-700">฿1,990</span>
+                            </div>
+                            <div class="md:col-span-2 flex justify-between md:justify-center items-center">
+                                <span class="md:hidden font-medium">จำนวน:</span>
+                                <div class="flex items-center border rounded">
+                                    <button class="px-3 py-1 text-gray-600 hover:bg-gray-100">-</button>
+                                    <input type="number" min="1" value="1" class="w-12 text-center focus:outline-none py-1">
+                                    <button class="px-3 py-1 text-gray-600 hover:bg-gray-100">+</button>
+                                </div>
+                            </div>
+                            <div class="md:col-span-2 flex justify-between md:justify-center items-center">
+                                <span class="md:hidden font-medium">ราคารวม:</span>
+                                <div class="flex items-center">
+                                    <span class="font-medium text-blue-700 mr-3">฿1,990</span>
+                                    <button class="text-red-500 hover:text-red-700">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Continue Shopping and Clear Cart Buttons -->
+                    <div class="flex flex-col sm:flex-row justify-between gap-4 mb-8">
+                        <a href="index.html" class="bg-white border border-blue-700 text-blue-700 hover:bg-blue-50 font-medium py-2 px-4 rounded transition duration-300 text-center">
+                            <i class="fas fa-arrow-left mr-2"></i>เลือกซื้อสินค้าต่อ
+                        </a>
+                        <button class="bg-white border border-red-500 text-red-500 hover:bg-red-50 font-medium py-2 px-4 rounded transition duration-300">
+                            <i class="fas fa-trash mr-2"></i>ล้างตะกร้า
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="lg:w-1/3">
+                    <div class="bg-white rounded-lg shadow-md p-6 sticky top-24">
+                        <h2 class="text-xl font-bold mb-4">สรุปคำสั่งซื้อ</h2>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between pb-3 border-b">
+                                <span class="text-gray-600">ราคาสินค้ารวม</span>
+                                <span class="font-semibold">฿5,289</span>
+                            </div>
+                            <div class="flex justify-between pb-3 border-b">
+                                <span class="text-gray-600">ภาษีมูลค่าเพิ่ม (7%)</span>
+                                <span class="font-semibold">฿370.23</span>
+                            </div>
+                            <div class="flex justify-between pb-3 border-b">
+                                <span class="text-gray-600">ค่าจัดส่ง</span>
+                                <span class="font-semibold">฿80</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center mb-6 text-lg font-bold">
+                            <span>รวมทั้งสิ้น</span>
+                            <span class="text-blue-700">฿5,739.23</span>
+                        </div>
+                        
+                        <!-- Promo Code -->
+                        <div class="mb-6">
+                            <div class="flex mb-4">
+                                <input type="text" placeholder="รหัสส่วนลด" class="flex-grow border rounded-l px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <button class="bg-blue-700 text-white px-4 rounded-r hover:bg-blue-800 transition duration-300">ใช้</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Checkout Button -->
+                        <a href="checkout.html" class="block bg-blue-700 hover:bg-blue-800 text-white text-center font-semibold py-3 px-4 rounded-lg transition duration-300">
+                            ดำเนินการชำระเงิน
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300">
+        <!-- Top Footer -->
+        <div class="container mx-auto px-4 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-4">เกี่ยวกับเรา</h4>
+                    <p class="mb-4">Paotung เป็นร้านขายอะไหล่รถยนต์ออนไลน์ที่มีสินค้าคุณภาพสูง ราคาเป็นมิตร พร้อมบริการจัดส่งทั่วประเทศ</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-4">ลิงก์ด่วน</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">หน้าแรก</a></li>
+                        <li><a href="#" class="hover:text-white">สินค้าทั้งหมด</a></li>
+                        <li><a href="#" class="hover:text-white">โปรโมชั่น</a></li>
+                        <li><a href="#" class="hover:text-white">บทความ</a></li>
+                        <li><a href="#" class="hover:text-white">เกี่ยวกับเรา</a></li>
+                        <li><a href="#" class="hover:text-white">ติดต่อเรา</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Help -->
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-4">ช่วยเหลือ</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">วิธีการสั่งซื้อ</a></li>
+                        <li><a href="#" class="hover:text-white">การชำระเงิน</a></li>
+                        <li><a href="#" class="hover:text-white">การจัดส่ง</a></li>
+                        <li><a href="#" class="hover:text-white">นโยบายการคืนสินค้า</a></li>
+                        <li><a href="#" class="hover:text-white">คำถามที่พบบ่อย</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-4">ติดต่อเรา</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>123 ถนนเจริญกรุง แขวงบางรัก เขตบางรัก กรุงเทพฯ 10500</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span>097-999-5390</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>paotung@jpt.re</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3"></i>
+                            <span>เปิดทำการ: จันทร์ - เสาร์, 08:30 - 18:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-700 py-6">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p>© 2025 Paotung. สงวนลิขสิทธิ์ทั้งหมด</p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <img src="imgs/11.webp" alt="Visa" class="h-8">
+                        <img src="imgs/12.webp" alt="Mastercard" class="h-8">
+                        <img src="imgs/13.webp" alt="PayPal" class="h-8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <a href="#" class="fixed bottom-6 right-6 bg-blue-700 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-800 transition duration-300">
+        <i class="fab fa-line text-3xl"></i>
+    </a>
+</body>
+</html>

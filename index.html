@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paotung - ร้านขายอะไหล่รถยนต์ออนไลน์</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+    
+    *  {
+     font-family: "Bai Jamjuree", sans-serif;
+    }
+    </style>
+<body class="bg-gray-50">
+    <!-- Top Bar -->
+    <div class="bg-blue-700 text-white py-2">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div>
+                <span class="mr-4"><i class="fas fa-phone mr-2"></i> โทร: 097-999-5390</span>
+                <span><i class="fas fa-envelope mr-2"></i> อีเมล: paotung@jpt.re</span>
+            </div>
+            <div>
+                <a href="#" class="mr-4 hover:text-blue-200">ติดตามสถานะการสั่งซื้อ</a>
+                <a href="#" class="hover:text-blue-200">ติดต่อเรา</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-blue-700">
+                        <i class="fas fa-cogs mr-2"></i>Paotung
+                    </a>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="hidden md:block flex-grow max-w-md mx-6">
+                    <div class="relative">
+                        <input type="text" placeholder="ค้นหาอะไหล่รถยนต์..." class="w-full py-2 pl-4 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                        <button class="absolute right-0 top-0 mt-2 mr-3 text-blue-700">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Navigation Items -->
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-gray-700 hover:text-blue-700">
+                        <i class="fas fa-user text-xl"></i>
+                        <span class="ml-1 hidden md:inline">บัญชี</span>
+                    </a>
+                    <a href="#" class="text-gray-700 hover:text-blue-700">
+                        <i class="fas fa-heart text-xl"></i>
+                        <span class="ml-1 hidden md:inline">สินค้าโปรด</span>
+                    </a>
+                    <a href="cart.html" class="text-gray-700 hover:text-blue-700 relative">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span class="ml-1 hidden md:inline">ตะกร้า</span>
+                        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile Search Bar -->
+            <div class="md:hidden pb-4">
+                <div class="relative">
+                    <input type="text" placeholder="ค้นหาอะไหล่รถยนต์..." class="w-full py-2 pl-4 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                    <button class="absolute right-0 top-0 mt-2 mr-3 text-blue-700">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Category Navigation -->
+    <div class="bg-gray-100 shadow-inner">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex overflow-x-auto space-x-6 no-scrollbar">
+                <a href="#" class="whitespace-nowrap text-gray-700 hover:text-blue-700 font-medium">หน้าแรก</a>
+                <a href="#" class="whitespace-nowrap text-gray-700 hover:text-blue-700 font-medium">โปรโมชั่น</a>
+                <a href="#" class="whitespace-nowrap text-gray-700 hover:text-blue-700 font-medium">อะไหล่เครื่องยนต์</a>
+                <a href="#" class="whitespace-nowrap text-gray-700 hover:text-blue-700 font-medium">ระบบช่วงล่าง</a>
+                <a href="#" class="whitespace-nowrap text-gray-700 hover:text-blue-700 font-medium">ระบบเบรก</a>
+                <a href="#" class="whitespace-nowrap text-gray-700 hover:text-blue-700 font-medium">น้ำมันเครื่อง</a>
+                <a href="#" class="whitespace-nowrap text-gray-700 hover:text-blue-700 font-medium">อุปกรณ์ตกแต่ง</a>
+                <a href="#" class="whitespace-nowrap text-gray-700 hover:text-blue-700 font-medium">ล้อและยาง</a>
+                <a href="#" class="whitespace-nowrap text-gray-700 hover:text-blue-700 font-medium">แบตเตอรี่</a>
+                <a href="#" class="whitespace-nowrap text-gray-700 hover:text-blue-700 font-medium">อะไหล่รถยนต์ทั้งหมด</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Banner -->
+    <div class="relative bg-blue-700">
+        <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight mb-4">อะไหล่รถยนต์คุณภาพดี ราคาถูก</h1>
+                <p class="text-xl text-blue-100 mb-6">มั่นใจในคุณภาพ รับประกันสินค้าทุกชิ้น พร้อมบริการจัดส่งทั่วประเทศ</p>
+                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center md:justify-start">
+                    <a href="#" class="bg-white text-blue-700 hover:bg-blue-50 font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300">ช้อปเลย</a>
+                    <a href="#" class="bg-transparent text-white hover:bg-blue-600 border border-white font-semibold py-3 px-6 rounded-lg transition duration-300">ดูโปรโมชั่น</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="imgs/1.webp" alt="อะไหล่รถยนต์คุณภาพสูง" class="rounded-lg shadow-xl">
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Categories -->
+    <div class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">หมวดหมู่ยอดนิยม</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <a href="#" class="bg-gray-100 rounded-lg p-4 text-center hover:shadow-lg transition duration-300">
+                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-oil-can text-2xl text-blue-700"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">น้ำมันเครื่อง</h3>
+                </a>
+                <a href="#" class="bg-gray-100 rounded-lg p-4 text-center hover:shadow-lg transition duration-300">
+                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-car-battery text-2xl text-blue-700"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">แบตเตอรี่</h3>
+                </a>
+                <a href="#" class="bg-gray-100 rounded-lg p-4 text-center hover:shadow-lg transition duration-300">
+                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-cog text-2xl text-blue-700"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">เครื่องยนต์</h3>
+                </a>
+                <a href="#" class="bg-gray-100 rounded-lg p-4 text-center hover:shadow-lg transition duration-300">
+                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-brake-system text-2xl text-blue-700"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">ระบบเบรก</h3>
+                </a>
+                <a href="#" class="bg-gray-100 rounded-lg p-4 text-center hover:shadow-lg transition duration-300">
+                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-tachometer-alt text-2xl text-blue-700"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">ไฟหน้ารถยนต์</h3>
+                </a>
+                <a href="#" class="bg-gray-100 rounded-lg p-4 text-center hover:shadow-lg transition duration-300">
+                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-car text-2xl text-blue-700"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">อุปกรณ์ตกแต่ง</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flash Sale -->
+    <div class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">โปรโมชั่นพิเศษ</h2>
+                <div class="bg-red-600 text-white px-4 py-2 rounded-lg flex items-center">
+                    <i class="fas fa-bolt mr-2"></i>
+                    <span class="font-semibold">Flash Sale</span>
+                    <span class="ml-3 bg-white text-red-600 px-2 py-1 rounded">18:11:59</span>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <div class="relative">
+                        <span class="absolute top-0 left-0 bg-red-600 text-white px-2 py-1 text-sm font-semibold">ลด 30%</span>
+                        <img src="imgs/2.webp" alt="น้ำมันเครื่อง Castrol EDGE" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">น้ำมันเครื่อง Castrol EDGE 5W-30</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(120 รีวิว)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-gray-500 line-through">฿1,290</span>
+                                <span class="text-2xl font-bold text-blue-700">฿899</span>
+                            </div>
+                            <button class="bg-blue-700 hover:bg-blue-800 text-white rounded-lg p-2">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <div class="relative">
+                        <span class="absolute top-0 left-0 bg-red-600 text-white px-2 py-1 text-sm font-semibold">ลด 25%</span>
+                        <img src="imgs/3.webp" alt="ผ้าเบรก Brembo" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">ผ้าเบรก Brembo สำหรับรถยนต์ Toyota</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(95 รีวิว)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-gray-500 line-through">฿3,200</span>
+                                <span class="text-2xl font-bold text-blue-700">฿2,400</span>
+                            </div>
+                            <button class="bg-blue-700 hover:bg-blue-800 text-white rounded-lg p-2">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <div class="relative">
+                        <span class="absolute top-0 left-0 bg-red-600 text-white px-2 py-1 text-sm font-semibold">ลด 20%</span>
+                        <img src="imgs/4.webp" alt="แบตเตอรี่ 3K" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">แบตเตอรี่ 3K รุ่น NS60L 45Ah</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(76 รีวิว)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-gray-500 line-through">฿2,500</span>
+                                <span class="text-2xl font-bold text-blue-700">฿1,990</span>
+                            </div>
+                            <button class="bg-blue-700 hover:bg-blue-800 text-white rounded-lg p-2">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <div class="relative">
+                        <span class="absolute top-0 left-0 bg-red-600 text-white px-2 py-1 text-sm font-semibold">ลด 35%</span>
+                        <img src="imgs/5.webp" alt="กรองอากาศ K&N" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">กรองอากาศ K&N สำหรับรถยนต์ Honda</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(52 รีวิว)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-gray-500 line-through">฿1,850</span>
+                                <span class="text-2xl font-bold text-blue-700">฿1,199</span>
+                            </div>
+                            <button class="bg-blue-700 hover:bg-blue-800 text-white rounded-lg p-2">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="#" class="inline-block bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">ดูสินค้าโปรโมชั่นทั้งหมด</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popular Brands -->
+    <div class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">แบรนด์ยอดนิยม</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <a href="#" class="bg-gray-100 p-4 rounded-lg flex items-center justify-center hover:shadow-md transition duration-300">
+                    <span class="font-bold text-xl text-gray-800">Toyota</span>
+                </a>
+                <a href="#" class="bg-gray-100 p-4 rounded-lg flex items-center justify-center hover:shadow-md transition duration-300">
+                    <span class="font-bold text-xl text-gray-800">Honda</span>
+                </a>
+                <a href="#" class="bg-gray-100 p-4 rounded-lg flex items-center justify-center hover:shadow-md transition duration-300">
+                    <span class="font-bold text-xl text-gray-800">Nissan</span>
+                </a>
+                <a href="#" class="bg-gray-100 p-4 rounded-lg flex items-center justify-center hover:shadow-md transition duration-300">
+                    <span class="font-bold text-xl text-gray-800">Mazda</span>
+                </a>
+                <a href="#" class="bg-gray-100 p-4 rounded-lg flex items-center justify-center hover:shadow-md transition duration-300">
+                    <span class="font-bold text-xl text-gray-800">Isuzu</span>
+                </a>
+                <a href="#" class="bg-gray-100 p-4 rounded-lg flex items-center justify-center hover:shadow-md transition duration-300">
+                    <span class="font-bold text-xl text-gray-800">Mitsubishi</span>
+                </a>
+                <a href="#" class="bg-gray-100 p-4 rounded-lg flex items-center justify-center hover:shadow-md transition duration-300">
+                    <span class="font-bold text-xl text-gray-800">Brembo</span>
+                </a>
+                <a href="#" class="bg-gray-100 p-4 rounded-lg flex items-center justify-center hover:shadow-md transition duration-300">
+                    <span class="font-bold text-xl text-gray-800">Bridgestone</span>
+                </a>
+                <a href="#" class="bg-gray-100 p-4 rounded-lg flex items-center justify-center hover:shadow-md transition duration-300">
+                    <span class="font-bold text-xl text-gray-800">Michelin</span>
+                </a>
+                <a href="#" class="bg-gray-100 p-4 rounded-lg flex items-center justify-center hover:shadow-md transition duration-300">
+                    <span class="font-bold text-xl text-gray-800">Castrol</span>
+                </a>
+                <a href="#" class="bg-gray-100 p-4 rounded-lg flex items-center justify-center hover:shadow-md transition duration-300">
+                    <span class="font-bold text-xl text-gray-800">Shell</span>
+                </a>
+                <a href="#" class="bg-gray-100 p-4 rounded-lg flex items-center justify-center hover:shadow-md transition duration-300">
+                    <span class="font-bold text-xl text-gray-800">NGK</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Best Sellers -->
+    <div class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">สินค้าขายดี</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <img src="imgs/6.webp" alt="ไส้กรองน้ำมันเครื่อง" class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2 truncate">ไส้กรองน้ำมันเครื่อง Toyota Genuine</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(148)</span>
+                        </div>
+                        <span class="text-xl font-bold text-blue-700">฿350</span>
+                        <button class="w-full mt-3 bg-blue-700 hover:bg-blue-800 text-white py-2 rounded-lg transition duration-300">
+                            <i class="fas fa-cart-plus mr-2"></i>เพิ่มในตะกร้า
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <img src="imgs/7.webp" alt="หัวเทียน NGK" class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2 truncate">หัวเทียน NGK Iridium (1 ชุด 4 หัว)</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(92)</span>
+                        </div>
+                        <span class="text-xl font-bold text-blue-700">฿1,890</span>
+                        <button class="w-full mt-3 bg-blue-700 hover:bg-blue-800 text-white py-2 rounded-lg transition duration-300">
+                            <i class="fas fa-cart-plus mr-2"></i>เพิ่มในตะกร้า
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <img src="imgs/8.webp" alt="น้ำยาหล่อเย็น" class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2 truncate">น้ำยาหล่อเย็น PTT Performa Super Long Life</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(64)</span>
+                        </div>
+                        <span class="text-xl font-bold text-blue-700">฿220</span>
+                        <button class="w-full mt-3 bg-blue-700 hover:bg-blue-800 text-white py-2 rounded-lg transition duration-300">
+                            <i class="fas fa-cart-plus mr-2"></i>เพิ่มในตะกร้า
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <img src="imgs/9.webp" alt="ลูกปืนล้อหน้า" class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2 truncate">ลูกปืนล้อหน้า KOYO สำหรับ Honda Civic</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(47)</span>
+                        </div>
+                        <span class="text-xl font-bold text-blue-700">฿950</span>
+                        <button class="w-full mt-3 bg-blue-700 hover:bg-blue-800 text-white py-2 rounded-lg transition duration-300">
+                            <i class="fas fa-cart-plus mr-2"></i>เพิ่มในตะกร้า
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <img src="imgs/10.webp" alt="น้ำมันเกียร์" class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2 truncate">น้ำมันเกียร์ Mobil Delvac 75W-90</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(38)</span>
+                        </div>
+                        <span class="text-xl font-bold text-blue-700">฿590</span>
+                        <button class="w-full mt-3 bg-blue-700 hover:bg-blue-800 text-white py-2 rounded-lg transition duration-300">
+                            <i class="fas fa-cart-plus mr-2"></i>เพิ่มในตะกร้า
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="#" class="inline-block bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">ดูสินค้าขายดีทั้งหมด</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">บริการของเรา</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition duration-300">
+                    <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-truck text-3xl text-blue-700"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">จัดส่งรวดเร็ว</h3>
+                    <p class="text-gray-600">จัดส่งทั่วประเทศ รวดเร็วด้วยบริการขนส่งชั้นนำ เช็คสถานะการจัดส่งได้ตลอด 24 ชั่วโมง</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition duration-300">
+                    <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-3xl text-blue-700"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">รับประกันคุณภาพ</h3>
+                    <p class="text-gray-600">รับประกันสินค้าทุกชิ้น มั่นใจได้ในคุณภาพ หากมีปัญหาสามารถเปลี่ยนคืนได้ภายใน 30 วัน</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition duration-300">
+                    <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-headset text-3xl text-blue-700"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">บริการลูกค้าตลอด 24 ชม.</h3>
+                    <p class="text-gray-600">ทีมงานพร้อมให้คำปรึกษาและแก้ไขปัญหาตลอด 24 ชั่วโมง ผ่านช่องทางออนไลน์หรือโทรศัพท์</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">ลูกค้าของเรา</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-700 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <span class="font-bold text-xl">S</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">สมชาย รักรถ</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"สินค้าคุณภาพดีมาก จัดส่งเร็วมาก สั่งเมื่อวานวันนี้ได้รับแล้ว ราคาถูกกว่าที่อื่น จะกลับมาอุดหนุนอีกแน่นอนครับ"</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-700 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <span class="font-bold text-xl">P</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">ปรีชา ช่างซ่อม</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"เป็นช่างซ่อมรถมานาน ได้ลองสั่งอะไหล่จากร้านนี้ไปหลายครั้ง คุณภาพดี ของแท้ ราคาไม่แพง พนักงานให้คำแนะนำดีมาก แนะนำเลยครับ"</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-700 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <span class="font-bold text-xl">N</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">นภา รักการขับ</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"ประทับใจมากค่ะ มีปัญหาเรื่องเบรกรถ ทางร้านแนะนำอะไหล่ที่เหมาะสม ราคาไม่แพง พอเปลี่ยนแล้วรถดีขึ้นมาก ขอบคุณมากๆ ค่ะ"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Subscribe -->
+    <div class="py-12 bg-blue-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">รับส่วนลดพิเศษ 10% สำหรับการสั่งซื้อครั้งแรก</h2>
+            <p class="text-xl text-blue-100 mb-8">ลงทะเบียนรับข่าวสารและโปรโมชั่นพิเศษจากเรา</p>
+            
+            <div class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+                <input type="email" placeholder="กรอกอีเมลของคุณ" class="flex-grow px-4 py-3 rounded-lg focus:outline-none text-gray-700">
+                <button class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold px-6 py-3 rounded-lg transition duration-300">
+                    สมัครรับข่าวสาร
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300">
+        <!-- Top Footer -->
+        <div class="container mx-auto px-4 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-4">เกี่ยวกับเรา</h4>
+                    <p class="mb-4">Paotung เป็นร้านขายอะไหล่รถยนต์ออนไลน์ที่มีสินค้าคุณภาพสูง ราคาเป็นมิตร พร้อมบริการจัดส่งทั่วประเทศ</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-4">ลิงก์ด่วน</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">หน้าแรก</a></li>
+                        <li><a href="#" class="hover:text-white">สินค้าทั้งหมด</a></li>
+                        <li><a href="#" class="hover:text-white">โปรโมชั่น</a></li>
+                        <li><a href="#" class="hover:text-white">บทความ</a></li>
+                        <li><a href="#" class="hover:text-white">เกี่ยวกับเรา</a></li>
+                        <li><a href="#" class="hover:text-white">ติดต่อเรา</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Help -->
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-4">ช่วยเหลือ</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">วิธีการสั่งซื้อ</a></li>
+                        <li><a href="#" class="hover:text-white">การชำระเงิน</a></li>
+                        <li><a href="#" class="hover:text-white">การจัดส่ง</a></li>
+                        <li><a href="#" class="hover:text-white">นโยบายการคืนสินค้า</a></li>
+                        <li><a href="#" class="hover:text-white">คำถามที่พบบ่อย</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-4">ติดต่อเรา</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>123 ถนนเจริญกรุง แขวงบางรัก เขตบางรัก กรุงเทพฯ 10500</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span>097-999-5390</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>paotung@jpt.re</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3"></i>
+                            <span>เปิดทำการ: จันทร์ - เสาร์, 08:30 - 18:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-700 py-6">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p>© 2025 Paotung. สงวนลิขสิทธิ์ทั้งหมด</p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <img src="imgs/11.webp" alt="Visa" class="h-8">
+                        <img src="imgs/12.webp" alt="Mastercard" class="h-8">
+                        <img src="imgs/13.webp" alt="PayPal" class="h-8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <a href="#" class="fixed bottom-6 right-6 bg-blue-700 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-800 transition duration-300">
+        <i class="fab fa-line text-3xl"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Simple JavaScript functionality can be added here
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Paotung website loaded successfully!');
+        });
+    </script>
+</body>
+</html>
